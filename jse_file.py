@@ -22,27 +22,32 @@ def division():
     if ext != 0:
         chunks += 1
     # division
+
     print(chunks)
 
 
     holder = {}
-    lst = []
-
-
-    e = -1
-    chk = 0
+    h = []
+    k = 0
+    p = 0
+    chunk = 0
     count = 1
-
     fil = open('testfle.txt')
     filread = fil.readlines()
-    d = 0
+    while k < len(filread)-1:
+        while p < seg:
+            h.append(filread[k])
+            k = k +1
+            p= p+1
+            holder.update({chunk:h})
+        h = []
+        chunk = chunk +1
+        p = 0
 
 
-    for x in range(0,11):
-        lst.append(filread)
-
-        print(lst)
-            
+    for x,y in holder.items():   
+        print(x,y)
+    print(len(holder))
             
     
 
