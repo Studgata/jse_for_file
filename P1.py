@@ -1,13 +1,14 @@
 
 
-def division():
+def division(ch_line= 1,file_name="testfle.txt"):
     # number of lines
-    seg = 1
+    p = str(file_name)
+    seg = ch_line
     num_line = 0
-    for x in open("testfle.txt", encoding="utf8"):
+    for x in open(p, encoding="utf8"):
         num_line += 1
 
-    print(num_line)
+    #print(num_line)
 
     # segmentation
     # number of chunks
